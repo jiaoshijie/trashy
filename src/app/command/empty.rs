@@ -41,7 +41,7 @@ impl Args {
             empty(MaybeIndexedTrashItems(Left(self.query_args.list(true)?)))?
         } else {
             empty(MaybeIndexedTrashItems(Right(
-                self.query_args.list_ranged(true, self.ranges.parse()?)?,
+                self.query_args.list_ranged(false, self.ranges.parse()?)?,
             )))?
         }
         Ok(())
